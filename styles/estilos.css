@@ -1,0 +1,243 @@
+/*Fuentes de texto*/
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+h1,
+h2,
+h3 {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700; /* Haciendo el texto más grueso */
+}
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+p {
+  font-family: "Tilt Neon", sans-serif;
+  line-height: 25px;
+  font-weight: 600; /* Haciendo el texto más grueso */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*Color Body*/
+body {
+  background: rgb(255, 99, 71);
+  background: linear-gradient(
+    90deg,
+    rgb(255, 140, 0) 0%,
+    rgba(255, 150, 85, 1) 25%,
+    rgba(255, 120, 70, 1) 75%
+  );
+  color: white;
+}
+
+/*Texto Header*/
+.texto-hero {
+  font-size: 6rem;
+  font-weight: 600;
+  color: #ffffff; /* Color personalizado */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra del texto */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  line-height: 1.2; /* Altura de línea para mejorar la legibilidad */
+}
+
+/*Imagen y degradado header*/
+.hero-header {
+  background: linear-gradient(
+      rgba(255, 153, 102, 0.1),
+      rgba(255, 178, 102, 0.3)
+    ),
+    url(/images/header2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+}
+
+/*Colores nav*/
+.navegacion {
+  background: rgb(255, 99, 71);
+  background: linear-gradient(
+    90deg,
+    rgb(255, 140, 0) 0%,
+    rgb(255, 165, 0) 50%,
+    rgb(255, 99, 71) 100%
+  );
+  color: white;
+}
+
+/* animaciones para la navegacion*/
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 1.1rem;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/*Colores footer*/
+.footer-comun {
+  background: rgb(3, 29, 21);
+  background: linear-gradient(
+    90deg,
+    rgb(2, 26, 24) 100%,
+    rgb(12, 38, 29) 50%,
+    rgb(0, 64, 59) 100%
+  );
+  color: white;
+}
+
+/*Imagenes delivery*/
+.moving-image {
+  max-width: 100px;
+  height: auto;
+}
+
+/*animacion hover*/
+.style_featured {
+  text-align: center;
+}
+.style_featured > div > div {
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+.style_featured > div:hover > div {
+  margin-top: +19px;
+  border: 1px solid rgb(202, 249, 196);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 9px 9px 9px;
+  background: rgba(153, 200, 250, 0.1);
+  transition: 1s;
+}
+
+.style_menu_item > div > div {
+  margin-top: +19px;
+  border: 1px solid rgb(194, 255, 183);
+  background: rgba(153, 200, 250, 0.1);
+  border-radius: 10px;
+}
+
+/*Reviews Section*/
+section {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.section-header {
+  position: relative;
+  padding-bottom: 10px;
+  text-align: center;
+  font-weight: 900;
+  padding-bottom: 25px;
+  color: #fff;
+}
+.section-header:after {
+  content: "";
+  height: 3px;
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 100px);
+  background: #fff;
+}
+
+.testimonials {
+  max-width: 1000px;
+  padding: 0 15px 50px;
+  margin: 0 auto 80px auto;
+}
+.single-item {
+  background: #fff;
+  color: #111;
+  padding: 15px;
+  margin: 50px 15px;
+}
+.profile {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.img-area img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 7px solid rgb(1, 135, 77);
+}
+.content {
+  font-size: 18px;
+}
+.content p {
+  text-align: justify;
+}
+.content p span {
+  font-size: 48px;
+  margin-right: 20px;
+  color: rgb(255, 219, 14);
+}
+.socials i {
+  margin-right: 25px;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: rgb(15, 36, 23);
+}
+
+#yangologo {
+  border-radius: 20px;
+}
+
+#logoBorder {
+  border-radius: 25px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  min-width: 200px;
+  z-index: 1050;
+}
+
+/* Estilos específicos para el modal con ID 'orderModal' */
+#orderModal .modal-content {
+  background-color: rgba(255, 115, 0, 0.9);
+  color: #000;
+  border: 1px solid black;
+}
+#orderModal .modal-header,
+#orderModal .modal-body,
+#orderModal .modal-footer {
+  color: #000;
+}
+#orderModal .modal-title {
+  font-weight: bold;
+  color: #333;
+}
+#orderModal .btn-close {
+  color: #000;
+}
+#orderModal .modal-footer .btn {
+  background-color: #f0f0f0;
+  color: #000;
+}
+#orderModal .modal-footer .btn:hover {
+  background-color: #ddd;
+}

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="/images/logoPizza.jpg" type="image/x-icon">
+	<title>Pizza Ciudad Blanca</title>
+	<!-- Bootstrap icons-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+	<!-- Bootstrap CSS-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+	<!-- Bootstrap JS-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" ></script>
+	<link rel="stylesheet" href="/styles/estilos.css" />
+</head>
+
+<body>
+	<nav class="navbar fixed-top navbar-expand-lg navegacion shadow">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img src="images/logoPizza.jpg" alt="logo" height="70px" id="logoBorder" />
+			</a>
+
+			<a class="navbar-brand" href="#">
+				<img src="images/bolivia-independence-day-feliz-dia-de-la-independencia.gif" alt="logo" width="400px"
+					height="60px" id="logoBorder" />
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-between" id="restaurant-navbar">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item px-3">
+						<a href="#" class="nav-link text-light">Inicio</a>
+					</li>
+					<li class="nav-item px-3">
+						<a href="#" class="nav-link text-light">Recomendado</a>
+					</li>
+					<li class="nav-item px-3">
+						<a href="#" class="nav-link text-light">Blog</a>
+					</li>
+					<li class="nav-item px-3">
+						<a href="#" class="nav-link text-light">Carta</a>
+					</li>
+					<li class="nav-item px-3">
+						<a href="#" class="nav-link text-light">Contacto</a>
+					</li>
+					<li class="nav-item px-3">
+						<form class="d-flex">
+							<input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+							<button class="btn bg-info" type="submit">Buscar</button>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="py-4"></div> <!-- Espacio para el navbar -->
+
+
+	<!-- Modal para "Pide YA!" -->
+	<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="orderModalLabel">Orden en proceso</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					Su orden está siendo procesada.😁🍕
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- vista Inicial Principal-->
+	<div class="hero-header overflow-hidden text-center mt-4 vw-100">
+		<div class="container-fluid py-5 h-100 d-flex align-items-center justify-content-center">
+			<div class="row align-items-center">
+				<div class="col-lg-12 text-center text-lg-center">
+					<h4 class="texto-hero my-4">Pizzeria "Ciudad Blanca"</h4>
+					<br />
+					<p class="text-white mb-4 mx-4 pb-4">
+						Consigue la mejor pizza de la ciudad Blanca de America. Nunca te
+						equivocarás con una deliciosa y clásica pizza. Explora nuestro menú que abarca
+						diferentes sabores.
+					</p>
+					<a href="#" class="btn btn-warning btn-outline-danger text-light py-sm-3 px-sm-5 me-3"
+						id="orderButton">Pide YA!</a>
+					<br />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- servicios -->
+	<div class="container mt-5">
+		<div class="page-header" id="services">
+			<h1 class="text-center text-default py-5">Nuestros Servicios</h1>
+		</div>
+		<div class="row text-center">
+			<div class="col-md-6 col-lg-3">
+				<span class="bi bi-calendar2-date fs-1"></span>
+				<h3 class="text-warning">Horario Flexible</h3>
+				<p>
+					Ofrecemos un horario flexible para adaptarnos a tus necesidades.
+				</p>
+			</div>
+			<div class="col-md-6 col-lg-3">
+				<span class="bi bi-truck fs-1"></span>
+				<h3 class="text-warning">Entrega Rápida</h3>
+				<p>Realizamos entregas a domicilio de manera rápida y eficiente.</p>
+			</div>
+			<div class="col-md-6 col-lg-3">
+				<span class="bi bi-car-front fs-1"></span>
+				<h3 class="text-warning">Aparcamiento Fácil</h3>
+				<p>Ofrecemos aparcamiento gratuito para todos nuestros clientes.</p>
+			</div>
+			<div class="col-md-6 col-lg-3">
+				<span class="bi bi-award fs-1"></span>
+				<h3 class="text-warning">Excelente Calidad</h3>
+				<p>
+					Nos esforzamos por ofrecer la mejor calidad en nuestros productos.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!--Seccion de menu-->
+	<div class="container text-center" id="Recomendaciones">
+		<h1 class="my-3 py-3">Recomendaciones</h1>
+	</div>
+
+	<!--Seccion de recomendaciones-->
+	<div class="container">
+		<div class="row style_featured">
+			<div class="col-md-6 col-lg-6 py-3 order-last">
+				<div class="card bg-body">
+					<img src="/images/pizza-vegetal-fake.jpeg" alt="" class="card-img-top" />
+					<div class="card-body">
+						<h5 class="card-title text-body">Margherita Clasica</h5>
+						<p class="card-text text-body">
+							Esta pizza tradicional italiana está hecha con salsa de tomate, mozzarella fresca y
+							albahaca.
+						</p>
+						<p class="card-text text-body">Contiene gluten y lácteos.</p>
+						<p class="card-text text-body">Tipo: Vegetariana</p>
+						<a class="btn btn-success">Probar »</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-lg-6 py-3 order-first order-lg-last">
+				<div class="card bg-body">
+					<img src="/images/pizza-4quesos-fake.jpeg" alt="" class="card-img-top" />
+					<div class="card-body">
+						<h5 class="card-title text-body">Pepperoni Deluxe</h5>
+						<p class="card-text text-body">
+							Deliciosa combinación de pepperoni picante, queso mozzarella y orégano fresco.
+						</p>
+						<p class="card-text text-body">Contiene gluten y lácteos.</p>
+						<p class="card-text text-body">Tipo: No vegana</p>
+						<a class="btn btn-success">Probar »</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-6 py-3 order-lg-first">
+				<div class="card bg-body">
+					<img src="/images/peperoni-fake.jpeg" alt="" class="card-img-top" />
+					<div class="card-body">
+						<h5 class="card-title text-body">Hawaiana Tropical</h5>
+						<p class="card-text text-body">
+							Combina el dulzor de la piña con el sabor ahumado del jamón sobre una base de queso fundido.
+						</p>
+						<p class="card-text text-body">Contiene gluten y lácteos.</p>
+						<p class="card-text text-body">Tipo: No vegana</p>
+						<a class="btn btn-success">Probar »</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-6 py-3">
+				<div class="card bg-body">
+					<img src="/images/carbonara.jpeg" alt="" class="card-img-top" />
+					<div class="card-body">
+						<h5 class="card-title text-body">Cuatro Quesos</h5>
+						<p class="card-text text-body">
+							Una deliciosa mezcla de mozzarella, gorgonzola, parmesano y queso de cabra.
+						</p>
+						<p class="card-text text-body">Contiene gluten y lácteos.</p>
+						<p class="card-text text-body">Tipo: Vegetariana</p>
+						<a class="btn btn-success">Probar »</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Seccion de envio a casa-->
+	<div class="container-fluid py-5 w-100">
+		<section class="bg-gradient py-5">
+			<div class="container">
+				<div class="row text-center align-items-center">
+					<div class="col-12 my-3">
+						<h3 class="text-light">
+							¡Disfruta de nuestras deliciosas pizzas en la comodidad de tu
+							hogar!
+						</h3>
+					</div>
+				</div>
+				<div class="row text-center align-items-center">
+					<div class="col-4 col-md-4 my-3">
+						<a href="https://www.facebook.com/YaigoBol" title="YaigoBolivia">
+							<img src="images/Yaigo.png" alt="YaigoBolivia" class="img-fluid moving-image"
+								data-bs-toggle="tooltip" data-bs-placement="left"
+								data-bs-original-title="YaigoBolivia" />
+						</a>
+					</div>
+					<div class="col-4 col-md-4 my-3">
+						<a href="hhttps://www.pedidosya.com.bo/" title="pedidosYa">
+							<img src="images/pedidosYa.png" alt="pedidosYa" class="img-fluid moving-image"
+								data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="pedidosYa" />
+						</a>
+					</div>
+					<div class="col-4 col-md-4 my-3">
+						<a href="https://pro.yango.com/bo-es/la-paz" title="YangoBolivia">
+							<img src="images/yango.png" alt="YangoBolivia" class="img-fluid moving-image"
+								data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="YangoBolivia"
+								id="yangologo" />
+						</a>
+					</div>
+				</div>
+				<!-- Mapa de Google -->
+				<div class="row text-center align-items-center mt-3">
+					<h3 class="card-text text-white">
+						Encuéntranos en el casco viejo de la ciudad!
+					</h3>
+					<div class="col-12 my-3">
+						<iframe width="100%" height="300" frameborder="0" style="border: 0"
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3813.3504966508335!2d-65.26073611356101!3d-19.048180659586624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf3643d00473%3A0x8c1071320e6b12f5!2sCasco%20Viejo%2C%20Sucre!5e1!3m2!1ses-419!2sbo!4v1728515538054!5m2!1ses-419!2sbo"
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!--Seccion de horario de atencion-->
+	<div class="table-responsive w-75 mx-auto rounded-2 py-2">
+		<h2 class="text-center py-3">Horario de Atención</h2>
+		<table class="table table-bordered table-striped table-hover text-dark bg-light">
+			<thead class="table-dark">
+				<tr>
+					<th scope="col" class="text-center" style="width: 50%">Día</th>
+					<th scope="col" class="text-center" style="width: 50%">Horario</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="text-center">Lunes</td>
+					<td class="text-center">11:00 AM - 10:00 PM</td>
+				</tr>
+				<tr>
+					<td class="text-center">Martes</td>
+					<td class="text-center">11:00 AM - 10:00 PM</td>
+				</tr>
+				<tr>
+					<td class="text-center">Miércoles</td>
+					<td class="text-center">11:00 AM - 10:00 PM</td>
+				</tr>
+				<tr>
+					<td class="text-center">Jueves</td>
+					<td class="text-center">11:00 AM - 10:00 PM</td>
+				</tr>
+				<tr>
+					<td class="text-center">Viernes</td>
+					<td class="text-center">11:00 AM - 11:00 PM</td>
+				</tr>
+				<tr>
+					<td class="text-center">Sábado</td>
+					<td class="text-center">11:00 AM - 9:00 PM</td>
+				</tr>
+				<tr>
+					<td class="text-center">Domingo</td>
+					<td class="text-center">Cerrado</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<!--Seccion de novedades y eventos-->
+	<div class="container py-4">
+		<div class="page-header text-center" id="news">
+			<h1 class="text-white">¡Novedades y Eventos!</h1>
+		</div>
+		<div class="row py-4">
+			<div class="col-md-8">
+				<div class="accordion" id="newsAccordion">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingOne">
+							<button class="accordion-button" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								🎉 ¡Apertura de la Nueva Sucursal en La Paz! 🚠
+							</button>
+						</h2>
+						<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+							data-bs-parent="#newsAccordion">
+							<div class="accordion-body">
+								<p>Sábado, 12 de Octubre</p>
+								<p>
+									¡Ven a disfrutar de nuestras pizzas con vista al lago y
+									música en vivo!
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingTwo">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								🎃 Fiesta de Halloween: ¡Ven Disfrazado! 👻
+							</button>
+						</h2>
+						<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+							data-bs-parent="#newsAccordion">
+							<div class="accordion-body">
+								<p>jueves, 31 de Octubre</p>
+								<p>
+									¡Disfruta de una noche llena de sustos, pizza de calabaza y
+									premios al mejor disfraz!
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingThree">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								🍬 Día de Todos los Santos: ¡Dulces Gratis! 🍭
+							</button>
+						</h2>
+						<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+							data-bs-parent="#newsAccordion">
+							<div class="accordion-body">
+								<p>Viernes, 1 de Noviembre</p>
+								<p>
+									¡Ven a La Pecora y disfruta de una selección especial de
+									postres italianos por el Día de Todos los Santos!
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 text-center">
+				<h3>¡Escanéame y descubre nuestro Menú Especial!</h3>
+				<div id="qrcode" class="qrcode">
+					<img src="images/qr.png" class="py-2 m-2 img-fluid" style="height: 200px"
+						alt="QR Code - Menú Especial" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Reviews de clientes-->
+	<section class="mb-0">
+		<div class="container">
+			<h1 class="section-header">
+				<span>Valoraciones de Clientes</span>
+			</h1>
+			<div class="testimonials">
+				<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="single-item">
+								<div class="row">
+									<div class="col-md-5">
+										<div class="profile">
+											<div class="img-area">
+												<img src="images/cr7.jpeg" alt="">
+											</div>
+											<div class="bio">
+												<h2>Cristiano Ronaldo</h2>
+												<h4>Cliente Satisfecho</h4>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content">
+											<p>
+												<span><i class="bi bi-chat-left-quote"></i></span>
+												¡La mejor pizza que he probado en mi vida! Increíble sabor y textura.
+												10/10, ¡recomendado! SIUUUU
+											</p>
+											<div class="py-4"></div>
+											<p class="text-warning">
+												<span class="bi bi-star-fill"></span>
+												<span class="bi bi-star-fill"></span>
+												<span class="bi bi-star-fill"></span>
+												<span class="bi bi-star-fill"></span>
+												<span class="bi bi-star-half"></span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="single-item">
+								<div class="row">
+									<div class="col-md-5">
+										<div class="profile">
+											<div class="img-area">
+												<img src="images/messi.jpeg" alt="">
+											</div>
+											<div class="bio">
+												<h2>Lionel Andres Messi</h2>
+												<h4>Balon de ORO</h4>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content">
+											<p>
+												<span><i class="bi bi-chat-left-quote"></i></span>
+												¡No me canso de sus pizzas! Increíbles combinaciones de ingredientes,
+												¡totalmente deliciosas! 5 estrellas.
+											</p>
+											<div class="py-4"></div>
+											<p class="text-warning">
+												<span class="bi bi-star-fill"></span>
+												<span class="bi bi-star-fill"></span>
+												<span class="bi bi-star-fill"></span>
+												<span class="bi bi-star-fill"></span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="single-item">
+								<div class="row">
+									<div class="col-md-5">
+										<div class="profile">
+											<div class="img-area">
+												<img src="images/obama.jpeg" alt="">
+											</div>
+											<div class="bio">
+												<h2>Barack Obama</h2>
+												<h4>ExPresidente de los EEUU</h4>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="content">
+											<p>
+												<span><i class="bi bi-chat-left-quote"></i></span>
+												La Pizzeria "Ciudad blanca" tiene las pizzas más jugosas y sabrosas que
+												he probado. ¡Volveré por más!.
+											</p>
+											<div class="py-4"></div>
+											<p class="text-warning">
+												<span class="bi bi-star-fill"></span>
+												<span class="bi bi-star-fill"></span>
+												<span class="bi bi-star-fill"></span>
+												<span class="bi bi-star-fill"></span>
+												<span class="bi bi-star-fill"></span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer-->
+	<footer class="clearfix bg-dark">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-md-3 d-none d-md-block">
+					<p><span class="bi bi-geo-alt-fill text-info"></span> VISÍTANOS</p>
+					<p>
+						Nos inspiramos a la frescura y calidad sin compromisos, y la cálida hospitalidad de Sucre,
+						Bolivia,
+						con su rica herencia culinaria
+					</p>
+				</div>
+				<div class="col-md-3 d-none d-md-block">
+					<p><span class="bi bi-clock text-info"></span> HORARIO</p>
+
+					<p>Lun-Vie: 11am - 10pm</p>
+					<p>Sab: 11am - 21pm</p>
+					<p>Dom: Cerrado</p>
+				</div>
+				<div class="col-md-3">
+					<p>
+						<span class="bi bi-sign-intersection-fill text-info"></span>
+						CONTACTO
+					</p>
+					<p>Plaza 25 de Mayo No 30, Sucre Bolivia</p>
+					<p>+64 12345</p>
+					<p><a href="mailto:mail@example.com">www.pizzeria-ciudad-blanca-sucre</a></p>
+				</div>
+				<div class="col-md-3">
+					<p><span class="bi bi-envelope text-info"></span> BOLETÍN</p>
+					<div class="input-group">
+						<input type="text" class="form-control m-1 py-1" placeholder="Correo electrónico..." />
+						<span class="input-group-btn">
+
+							<button class="btn btn-primary" type="button" data-bs-toggle="toast"
+								data-bs-target=".toast">
+								Suscribirse
+							</button>
+						</span>
+					</div>
+					<p>
+						<a class="bi bi-tiktok" target="_blank" href="https://tiktok.com/"></a>
+						<a class="bi bi-facebook footer-socialicon" target="_blank"
+							href="https://www.facebook.com/"></a>
+						<a class="bi bi-google footer-socialicon" target="_blank" href="https://www.google.com/"></a>
+						<a class="bi bi-linkedin footer-socialicon" target="_blank"
+							href="https://www.linkedin.com/"></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Toast-->
+	<div class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive"
+		aria-atomic="true" id="liveToast">
+		<div class="d-flex">
+			<div class="toast-body">
+				¡Suscripción exitosa!
+			</div>
+			<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+				aria-label="Close"></button>
+		</div>
+	</div>
+	<!-- Scripts -->
+	<script>
+		$(document).ready(function () {
+			$('.btn.btn-primary').click(function () {
+				var toastLiveExample = document.getElementById('liveToast');
+				var toast = new bootstrap.Toast(toastLiveExample, {
+					animation: true,
+					autohide: true,
+					delay: 3000
+				});
+				toast.show();
+			});
+		});
+
+		document.addEventListener("DOMContentLoaded", function () {
+			const orderButton = document.getElementById("orderButton");
+			const orderModal = new bootstrap.Modal(document.getElementById('orderModal'));
+
+			orderButton.addEventListener("click", function (event) {
+				event.preventDefault(); 
+
+				orderModal.show();
+				setTimeout(function () {
+					orderModal.hide();
+				}, 3000);
+			});
+		});
+	</script>
+</body>
+
+</html>
