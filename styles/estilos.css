@@ -48,7 +48,7 @@ body {
       rgba(255, 153, 102, 0.1),
       rgba(255, 178, 102, 0.3)
     ),
-    url(/images/header2.jpg);
+    url(images/header2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
